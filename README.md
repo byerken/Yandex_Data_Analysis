@@ -12,15 +12,15 @@ Objective
 The primary goal was to analyze e-commerce sales data for "Delivery Dron" to provide actionable insights for revenue maximization and guide investment decisions for 2020. The project addressed investor queries about optimal regions and advertising channels for customer acquisition, delivering a data-driven strategy to enhance ROI. Key deliverables included an interactive dashboard for real-time monitoring and a presentation for stakeholders.
 Data Sources
 
-Sales Data: 12 months (May 2019–April 2020) of daily transaction records (~100,000 rows across 9 CSVs) containing user IDs, session details (start/end times, duration), order timestamps, revenue, payment types, and promo code usage.
+Sales Data: 6 months (May 2019–October 2019) of daily transaction records (~1,000 rows across 1 CSVs) containing user IDs, session details (start/end times, duration), order timestamps, revenue, payment types, and promo code usage.
 User Data: Demographic and behavioral data, including region (e.g., US, UK, Germany, France), device (e.g., iPhone, Android, PC, Mac), and acquisition channel (e.g., social media, organic, contextual ads, email, blogger ads).
-Key Metrics: Revenue, conversion rates, average order value (AOV), customer acquisition cost (CAC), and session duration.
+Key Metrics: Revenue, conversion rates, average order value (AOV), and session duration.
 
 # Methodology
 
 Data Preprocessing:
 
-Loaded and cleaned 9 CSV files using pandas, standardizing column names (e.g., lowercase, underscores) and converting timestamps (session_start, session_end, order_dt) to datetime format.
+Loaded and cleaned 1 CSV file using pandas, standardizing column names (e.g., lowercase, underscores) and converting timestamps (session_start, session_end, order_dt) to datetime format.
 Identified missing data: 71.84% of rows lacked order-related data (expected, as not all sessions result in purchases), but 1.28% had missing region, device, and channel data.
 Discovered a systematic data collection issue for returning users (post-July 1, 2019), where region, device, and channel were not recorded. Imputed missing values using first-visit data for the same user, ensuring data integrity.
 Corrected inconsistencies (e.g., "Unjted States" to "United States") to enhance dataset quality.
@@ -43,7 +43,7 @@ Heatmaps of session duration by day/hour to identify peak engagement times.
 
 Key insights:
 US accounted for 68-70% of traffic and revenue, with peak session durations on Tuesdays, Fridays, and Sundays.
-Social media channels had the highest conversion rates (e.g., 5.5% for US social media) and revenue contribution.
+Social media channels had the highest conversion rates and revenue contribution.
 UK showed the highest AOV and conversion rates but lower traffic volume.
 
 
